@@ -1,0 +1,23 @@
+<mat-card *ngIf="unicorn">
+  <mat-card-header>
+    <img mat-card-avatar [src]="unicorn.photo" alt="Photo" />
+    <mat-card-title>{{ unicorn.name }}</mat-card-title>
+    <mat-card-subtitle>id: {{ unicorn.id }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="unicorn.photo" alt="Photo" />
+  <mat-card-content>
+    <div>weight: {{ unicorn.weight }}</div>
+    <div>birthyear: {{ unicorn.birthyear }}</div>
+    <div>hobbies: {{ unicorn.hobbies }}</div>
+    <div>capacities: {{ unicorn.capacities }}</div>
+    <div>capacities labels: {{ unicorn.capacitiesLabels }}</div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button type="button" mat-mini-fab color="warn" (click)="deleteUnicorn(unicorn)"><mat-icon>delete</mat-icon></button>
+    <button type="button" mat-mini-fab [color]="(isInCart$ | async) ? 'accent' : 'primary'" (click)="toggleToCart(unicorn)">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button type="button" mat-mini-fab color="primary" [routerLink]="['/unicorn', unicorn.id]"><mat-icon>visibility</mat-icon></button>
+    <button type="button" mat-mini-fab color="primary" (click)="openEditDialog()"><mat-icon>edit</mat-icon></button>
+  </mat-card-actions>
+</mat-card>

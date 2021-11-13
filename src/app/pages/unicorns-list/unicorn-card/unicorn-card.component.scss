@@ -1,0 +1,12 @@
+:host {
+  margin: 12px;
+}
+
+mat-card {
+  max-width: 250px;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-evenly;
+}

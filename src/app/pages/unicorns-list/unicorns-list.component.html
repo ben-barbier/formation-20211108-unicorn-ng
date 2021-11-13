@@ -1,0 +1,6 @@
+<mat-card class="notes">
+  <h2>Licorne la plus vielle : {{ (oldestUnicorn$ | async)?.name }}</h2>
+  <h2>Age moyen : {{ averageAge$ | async }}</h2>
+</mat-card>
+
+<app-unicorn-card *ngFor="let unicorn of unicorns$ | async; trackBy: trackById" [unicorn]="unicorn"></app-unicorn-card>
