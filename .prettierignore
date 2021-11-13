@@ -1,0 +1,14 @@
+/*
+!/src
+
+*.ico
+*.png
+*.svg
+*.bmp
+*.gif
+*.webp
+
+# System Files
+.DS_Store
+Thumbs.db
+.gitkeep
